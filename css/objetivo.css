@@ -1,0 +1,391 @@
+/* ==============================
+   objetivo.css
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+
+/* ==============================
+   Variables locales
+============================== */
+:root {
+  --wine:         #7b1f3b;
+  --wine-dark:    #4e1226;
+  --gold:         #c9a84c;
+  --bg-light:     #f8f5f0;
+  --white:        #ffffff;
+  --text-dark:    #1a1a1a;
+  --text-muted:   #666666;
+  --shadow-sm:    0 2px 12px rgba(0, 0, 0, 0.07);
+  --shadow-md:    0 8px 28px rgba(0, 0, 0, 0.13);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+  --transition:   0.3s ease;
+}
+/* ==============================
+   Bloque de promesa
+============================== */
+.promise-block {
+  padding: 0.5rem 0;
+}
+
+.promise-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.promise-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--wine-dark);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.promise-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.btn-promise {
+  background: var(--wine);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  transition: all var(--transition);
+}
+
+.btn-promise:hover {
+  background: var(--wine-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(123, 31, 59, 0.35);
+}
+
+
+/* ==============================
+   Sección Misión / Visión oscura
+============================== */
+.bg-dark-wine {
+  background: linear-gradient(135deg, #1a0810, #4e1226);
+}
+
+.mv-card {
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.mv-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.15);
+  border: 1.5px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
+.mv-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.mv-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Card central con cita */
+.mv-card-center {
+  background: rgba(201, 168, 76, 0.08);
+  border-color: rgba(201, 168, 76, 0.25);
+  justify-content: center;
+}
+
+.mv-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mv-quote i {
+  color: var(--gold);
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+.mv-quote blockquote {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.mv-quote cite {
+  font-size: 0.78rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+/* ==============================
+   Carrusel
+============================== */
+#carruselEquipo,
+#carruselTrabajo {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#carruselEquipo .carousel-inner,
+#carruselTrabajo .carousel-inner {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Imagen — formato horizontal fijo 16:9 */
+#carruselEquipo img,
+#carruselTrabajo img {
+  width: 100%;
+  height: 480px;          /* alto fijo igual para todas */
+  object-fit: cover;      /* recorta sin deformar */
+  object-position: center; /* centra el contenido importante */
+  display: block;
+}
+
+/* Caption */
+.carousel-caption-custom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(78, 18, 38, 0.92), transparent);
+  color: var(--white);
+  padding: 3rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.carousel-caption-custom h5 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.carousel-caption-custom p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Controles */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 42px;
+  height: 42px;
+  background: rgba(123, 31, 59, 0.75);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: background var(--transition);
+}
+
+.carousel-control-prev { left: -20px; }
+.carousel-control-next { right: -20px; }
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: var(--wine);
+}
+
+/* Indicadores */
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--wine);
+  opacity: 0.4;
+  border: none;
+  margin: 0 4px;
+  transition: opacity var(--transition);
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: var(--gold);
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+  #carruselEquipo img,
+  #carruselTrabajo img {
+    height: 280px;
+  }
+
+  .carousel-control-prev { left: 6px; }
+  .carousel-control-next { right: 6px; }
+}
+
+@media (max-width: 576px) {
+  #carruselEquipo img,
+  #carruselTrabajo img {
+    height: 220px;
+  }
+}
+
+/* ==============================
+   Cards de áreas de práctica
+============================== */
+.card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.card .card-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--wine-dark);
+}
+
+/* Cards de áreas */
+.area-card {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13) !important;
+}
+
+.area-img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.area-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Botón Ver servicio */
+.btn-area-primary {
+  background: var(--wine);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  border: none;
+  transition: all var(--transition);
+}
+
+.btn-area-primary:hover {
+  background: var(--wine-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Botón Consulta gratuita */
+.btn-area-secondary {
+  background: transparent;
+  color: var(--wine);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--wine);
+  transition: all var(--transition);
+}
+
+.btn-area-secondary:hover {
+  background: var(--wine);
+  color: #ffffff;
+}
+/* ==============================
+   Cards de valores
+============================== */
+.value-card {
+  border-radius: 12px !important;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+.value-card i {
+  color: var(--wine);
+}
+
+.value-card .card-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--wine-dark);
+  margin-bottom: 0.5rem;
+}
+
+.value-card .card-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+  #carruselEquipo img {
+    height: 300px;
+  }
+
+  .carousel-control-prev { left: 4px; }
+  .carousel-control-next { right: 4px; }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #carruselEquipo img {
+    height: 240px;
+  }
+}

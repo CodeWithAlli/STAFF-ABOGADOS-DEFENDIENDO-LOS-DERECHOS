@@ -1,0 +1,183 @@
+<!-- Navbar institucional -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top py-3"
+     role="navigation" aria-label="Menú principal">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <!-- Marca -->
+    <a class="navbar-brand fw-bold" href="index.html">
+      STAFF ABOGADOS
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"><div></div></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-lg-4 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link nav-animated active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-animated" href="pages/nosotros.html">Nuestro Equipo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-animated" href="pages/servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-animated" href="pages/contacto.html">Escríbenos</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<style>
+/* ==============================
+   Navbar base
+============================== */
+#navbar {
+  background-color: #4e1226;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1030;
+}
+
+#navbar.scrolled {
+  background-color: #4e1226;            
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Marca */
+.navbar-brand {
+  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+#navbar.scrolled .navbar-brand {
+  color: #ffffff !important;            
+}
+
+/* Links */
+.nav-link.nav-animated {
+  position: relative;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link.nav-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #cab03f;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link.nav-animated:hover,
+.nav-link.nav-animated.active {
+  color: #ecd825;
+}
+
+.nav-link.nav-animated:hover::after,
+.nav-link.nav-animated.active::after {
+  width: 100%;
+}
+
+/* Hamburguesa */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem;
+  width: 40px;
+  height: 32px;
+  position: relative;
+  background: transparent;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #cab03f;
+  border-radius: 1px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-toggler-icon::before { top: 4px; }
+.navbar-toggler-icon div     { top: 50%; transform: translateY(-50%); }
+.navbar-toggler-icon::after  { bottom: 4px; }
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon div {
+  opacity: 0;
+}
+
+/* Responsive — móvil */
+@media (max-width: 991px) {
+  .navbar-nav {
+    background-color: #3a0c1b;         
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-link.nav-animated {
+    color: rgba(255, 255, 255, 0.85);   
+  }
+
+  .nav-link.nav-animated:hover {
+    color: #ecd825;
+  }
+
+  .nav-link.nav-animated::after {
+    display: none;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+</style>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>

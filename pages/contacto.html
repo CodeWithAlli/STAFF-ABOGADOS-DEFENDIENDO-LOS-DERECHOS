@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Staff Abogados</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main>
+
+    <!-- ==============================
+         Hero de contacto
+    ============================== -->
+    <section class="contacto-hero">
+      <div class="container text-center">
+        <p class="contacto-tag">Estamos para ayudarte</p>
+        <h1 class="contacto-titulo">¿Tienes un problema legal?<br>Cuéntanoslo</h1>
+        <p class="contacto-sub">Te orientamos sin compromiso. Sin tecnicismos. En lenguaje claro.</p>
+
+        <!-- Estado de atención -->
+        <div id="estado-atencion" class="estado-badge" role="status"></div>
+      </div>
+    </section>
+
+
+    <!-- ==============================
+         Cómo contactarnos — 3 opciones visuales
+    ============================== -->
+    <section class="py-5 bg-white">
+      <div class="container">
+
+        <div class="text-center mb-4">
+          <p class="section-label">Elige cómo prefieres</p>
+          <h2 class="section-heading">3 formas de hablar con nosotros</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- WhatsApp -->
+          <div class="col-12 col-md-4">
+            <a href="https://wa.me/51999888777?text=Hola,%20quisiera%20una%20consulta%20legal"
+               target="_blank" class="contacto-opcion contacto-opcion--wa">
+              <div class="contacto-opcion-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <h4>WhatsApp</h4>
+              <p>La forma más rápida. Escríbenos ahora y te respondemos en minutos.</p>
+              <span class="contacto-opcion-btn">Abrir WhatsApp →</span>
+            </a>
+          </div>
+
+          <!-- Llamada -->
+          <div class="col-12 col-md-4">
+            <a href="tel:+51999888777" class="contacto-opcion contacto-opcion--call">
+              <div class="contacto-opcion-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h4>Llámanos</h4>
+              <p>Habla directamente con uno de nuestros abogados. Sin esperas.</p>
+              <span class="contacto-opcion-btn">+51 999 888 777 →</span>
+            </a>
+          </div>
+
+          <!-- Formulario -->
+          <div class="col-12 col-md-4">
+            <a href="#formulario" class="contacto-opcion contacto-opcion--form">
+              <div class="contacto-opcion-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h4>Escríbenos</h4>
+              <p>Completa el formulario y te respondemos antes de 24 horas.</p>
+              <span class="contacto-opcion-btn">Ir al formulario →</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==============================
+         Horario visual
+    ============================== -->
+    <section class="py-5 bg-light-wine">
+      <div class="container">
+
+        <div class="text-center mb-4">
+          <p class="section-label">¿Cuándo estamos?</p>
+          <h2 class="section-heading">Horario de atención</h2>
+        </div>
+
+        <div class="horario-grid">
+          <div class="horario-dia">
+            <span class="dia-nombre">Lun</span>
+            <span class="dia-hora">8:30 – 16:00</span>
+          </div>
+          <div class="horario-dia">
+            <span class="dia-nombre">Mar</span>
+            <span class="dia-hora">8:30 – 16:00</span>
+          </div>
+          <div class="horario-dia">
+            <span class="dia-nombre">Mié</span>
+            <span class="dia-hora">8:30 – 16:00</span>
+          </div>
+          <div class="horario-dia">
+            <span class="dia-nombre">Jue</span>
+            <span class="dia-hora">8:30 – 16:00</span>
+          </div>
+          <div class="horario-dia">
+            <span class="dia-nombre">Vie</span>
+            <span class="dia-hora">8:30 – 16:00</span>
+          </div>
+          <div class="horario-dia">
+            <span class="dia-nombre">Sáb</span>
+            <span class="dia-hora">9:00 – 13:00</span>
+          </div>
+          <div class="horario-dia horario-dia--cerrado">
+            <span class="dia-nombre">Dom</span>
+            <span class="dia-hora">Cerrado</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==============================
+         Formulario + Mapa
+    ============================== -->
+    <section class="py-5 bg-white" id="formulario">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+
+          <!-- Formulario -->
+          <div class="col-md-6">
+            <p class="section-label">Escríbenos</p>
+            <h2 class="section-heading mb-4">Cuéntanos tu caso</h2>
+
+            <form class="needs-validation contacto-form" novalidate>
+
+              <div class="campo-grupo">
+                <label for="nombre">
+                  <i class="fas fa-user"></i> Tu nombre
+                </label>
+                <input type="text" id="nombre" placeholder="¿Cómo te llamas?" required>
+                <span class="campo-error">Por favor ingresa tu nombre.</span>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="correo">
+                  <i class="fas fa-envelope"></i> Tu correo
+                </label>
+                <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+                <span class="campo-error">Ingresa un correo válido.</span>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="telefono">
+                  <i class="fas fa-phone"></i> Tu teléfono
+                  <span class="campo-opcional">(opcional)</span>
+                </label>
+                <input type="tel" id="telefono" placeholder="+51 999 000 000">
+              </div>
+
+              <div class="campo-grupo">
+                <label for="asunto">
+                  <i class="fas fa-balance-scale"></i> ¿Sobre qué necesitas ayuda?
+                </label>
+                <select id="asunto" required>
+                  <option value="" disabled selected>Elige un tema</option>
+                  <option>Derecho Civil y Comercial</option>
+                  <option>Derecho de Familia</option>
+                  <option>Derecho Penal</option>
+                  <option>Derecho Laboral</option>
+                  <option>Derecho Administrativo</option>
+                  <option>Derecho Corporativo</option>
+                  <option>No sé, necesito orientación</option>
+                </select>
+                <span class="campo-error">Elige un área.</span>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="mensaje">
+                  <i class="fas fa-comment-alt"></i> Cuéntanos qué pasó
+                </label>
+                <textarea id="mensaje" rows="5"
+                  placeholder="No te preocupes por los tecnicismos. Escribe con tus palabras..." required></textarea>
+                <span class="campo-error">Por favor describe tu caso.</span>
+              </div>
+
+              <button type="submit" class="btn-enviar">
+                <i class="fas fa-paper-plane me-2"></i> Enviar mensaje
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Ubicación -->
+          <div class="col-md-6">
+            <p class="section-label">Visítanos</p>
+            <h2 class="section-heading mb-4">Oficina Principal</h2>
+
+            <ul class="oficina-datos">
+              <li>
+                <div class="oficina-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <strong>Dirección</strong>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Av+Abancay+491,+Of+305,+Lima"
+                     target="_blank" rel="noopener">
+                    Av. Abancay 491, Of. 305 — Lima Centro
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="oficina-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <strong>Teléfono</strong>
+                  <a href="tel:+51999888777">+51 999 888 777</a>
+                </div>
+              </li>
+              <li>
+                <div class="oficina-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong>Correo</strong>
+                  <a href="mailto:consultas@staffabogados.pe">consultas@staffabogados.pe</a>
+                </div>
+              </li>
+              <li>
+                <div class="oficina-icon wa"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/51999888777?text=Hola,%20quisiera%20una%20consulta%20legal"
+                     target="_blank" rel="noopener">
+                    Escríbenos directo
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="ratio ratio-16x9 rounded overflow-hidden mt-4">
+              <iframe
+                src="https://www.google.com/maps?q=Av+Abancay+491,+Lima&output=embed"
+                allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Staff Abogados">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <!-- Botones flotantes -->
+  <div class="social-float" aria-label="Redes sociales">
+    <a href="https://facebook.com/staffabogados"        target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://linkedin.com/company/staffabogados" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/staffabogados"        target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/51999888777"                  target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://tiktok.com/@staffabogados"          target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/scripts.js"></script>
+
+  <script>
+    // Validación del formulario
+    document.querySelector('.needs-validation').addEventListener('submit', e => {
+      if (!e.target.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      e.target.classList.add('was-validated');
+    });
+
+    // Estado de atención en tiempo real
+    (() => {
+      const horarios = { 1:{i:8.5,f:16}, 2:{i:8.5,f:16}, 3:{i:8.5,f:16}, 4:{i:8.5,f:16}, 5:{i:8.5,f:16}, 6:{i:9,f:13}, 0:null };
+      const ahora = new Date();
+      const dia   = ahora.getDay();
+      const hora  = ahora.getHours() + ahora.getMinutes() / 60;
+      const el    = document.getElementById('estado-atencion');
+      const t     = horarios[dia];
+
+      if (t && hora >= t.i && hora < t.f) {
+        el.innerHTML = '<span class="dot dot--verde"></span> Estamos atendiendo ahora mismo';
+        el.classList.add('estado--abierto');
+      } else {
+        el.innerHTML = '<span class="dot dot--rojo"></span> Fuera de horario — déjanos tu mensaje';
+        el.classList.add('estado--cerrado');
+      }
+    })();
+  </script>
+
+</body>
+</html>
