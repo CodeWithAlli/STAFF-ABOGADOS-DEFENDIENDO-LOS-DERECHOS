@@ -1,3 +1,9 @@
+## Autor
+Desarrollado por Allison — CodeWithAlli
+
+Proyecto de portafolio profesional.
+
+
 # Staff Abogados — Sitio Web Institucional
 
 Sitio web estático para el estudio jurídico **Staff Abogados**, Lima, Perú.
