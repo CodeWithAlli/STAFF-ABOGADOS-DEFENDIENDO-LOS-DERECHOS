@@ -3,7 +3,6 @@ Desarrollado por Allison — CodeWithAlli
 
 Proyecto de portafolio profesional.
 
-
 # Staff Abogados — Sitio Web Institucional
 
 Sitio web estático para el estudio jurídico **Staff Abogados**, Lima, Perú.
@@ -11,7 +10,7 @@ Sitio web estático para el estudio jurídico **Staff Abogados**, Lima, Perú.
 ## 🗂️ Estructura del proyecto
 
 ```
-MAGISTER/
+STAFF-ABOGADOS/
 ├── index.html              ← Página de inicio
 ├── pages/                  ← Páginas internas
 │   ├── servicios.html
@@ -61,12 +60,12 @@ Requiere un servidor local (los componentes se cargan con `fetch`).
 
 **Opción 2 — Python:**
 ```bash
-cd MAGISTER
+cd STAFF-ABOGADOS
 python3 -m http.server 8080
 # Abrir: http://localhost:8080
 ```
 
-## 📞 Contacto institucional
+## 📞 Contacto institucional (EJEMPLOS)
 - Av. Abancay 491, Of. 305 — Lima Centro
 - consultas@staffabogados.pe
 - +51 999 888 777
